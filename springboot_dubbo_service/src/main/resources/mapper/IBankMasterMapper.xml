@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjh.provider.mapper.IBankMasterMapper">
+	<!-- 添加账户信息 -->
+	<insert id="addMasterInfo">
+		insert into master(masterid,mastername,mastermoney)
+		values(#{masterid},#{mastername},#{mastermoney})
+	</insert>
+	<!-- 删除Msater 根据masterid -->
+	<delete id="removerMaterInfoById">
+		delete from master 
+		where masterid=#{masterid}
+	</delete>
+	<!--修改账户信息 -->
+	<update id="updateMasterInfo">
+		update master set mastermoney=mastermoney+#{mastermoney}
+		where mastername=#{mastername} and masterid={masterid}
+	</update>
+	<!--查询银行的所有master的用户 -->
+	<select id="findAllMasterInfo">
+		select * from  master
+	</select>
+	<!-- 根据masterid 查询的的指定用户信息 -->
+	<select id="findMasterInfoById">
+		select * from master
+		where masterid=#{masterid}
+	</select>
+</mapper>

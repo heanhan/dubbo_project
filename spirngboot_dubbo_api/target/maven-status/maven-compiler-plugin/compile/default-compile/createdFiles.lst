@@ -1,0 +1,10 @@
+com\dubbo\api\pojo\Student.class
+com\dubbo\api\service\IBankSlaveService.class
+com\dubbo\api\service\IBankMasterService.class
+com\dubbo\api\pojo\Menu.class
+com\dubbo\api\pojo\Slave.class
+com\dubbo\api\pojo\Master.class
+com\dubbo\api\service\DemoService.class
+com\dubbo\api\service\IBankMasterSlaveService.class
+com\dubbo\api\pojo\User.class
+com\dubbo\api\service\IUserService.class

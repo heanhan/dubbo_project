@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjh.provider.mapper.IBankSlaveMapper">
+
+	<!-- 添加账户信息 -->
+	<insert id="addSlaveInfo">
+		insert into slave(slaveid,slavename,slavemoney)
+		values(#{slaveid},#{slavename},#{slavemoney})
+	</insert>
+
+	<!-- 删除账户信息,根据slaveid -->
+	<delete id="removerSlaveInfoById">
+		delete from slave where slaveid=#{slaveid}
+	</delete>
+	<!-- 修改账户信息 -->
+	<update id="updateSlaveInfo">
+		update slave set slavemoney=#{slavemoney}
+		where slaveid={slaveid} and slavename=#{slavenoney}
+	</update>
+	<!-- 查询银行的所有slave的用户 -->
+	<select id="findAllSlaveInfo">
+		select * from slave
+	</select>
+	<!-- 根据slaveid 查询的的指定用户信息 -->
+	<select id="findSlaveInfoById">
+		select * from slave
+		where slaveid=#{slaveid}
+	</select>
+</mapper>
